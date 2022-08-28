@@ -101,3 +101,47 @@
         }
     }
 }
+
+@media(max-width: 68.75em){
+    .sidebar{
+        .top{
+            .logo{
+                font-size: 1.8rem;
+            }
+        }
+
+        .center{
+            padding: 8px;
+
+            ul{
+
+                .title{
+                    font-size: 1.15rem;
+                }
+
+                li{
+                    .icon{
+                        font-size: 2rem;
+                    }
+
+                    span{
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+
+        .bottom{
+            .colorOption{
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+        }
+    }
+}
+
+@media(max-width: 46em){
+    .sidebar{
+        display: none;
+    }
+}

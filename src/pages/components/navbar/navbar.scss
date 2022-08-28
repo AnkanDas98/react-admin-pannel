@@ -1,0 +1,267 @@
+.navbar{
+    height: 5rem;
+    border-bottom:  0.5px solid rgb(230, 227, 227);
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #555;
+
+    .desktop{
+        width: 100%;
+        height: 100%;
+
+    .wrapper{
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .search{
+            width: 20%;
+            display: flex;
+            align-items: center;
+            border:  0.5px solid lightgray;
+            padding: 6px;
+           
+            input{
+                flex: 1;
+                border: none;
+                outline: none;
+                font-size: 1.2rem;
+
+                &::placeholder{
+                    font-size: 1.2rem;
+                }
+            }
+
+            .icon{
+                font-size: 2.2rem;
+            }
+        }
+
+        .items{
+            display: flex;
+            align-items: center;
+        }
+
+        .item{
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            margin-right: 2rem;
+            cursor: pointer;
+            position: relative;
+
+            .icon{
+                font-size: 2.2rem;
+            }
+
+            .avatar{
+                width: 3.6rem;
+                height: 3.6rem;
+                border-radius: 50%;
+            }
+
+            .counter{
+                width: 1.8rem;
+                height: 1.8rem;
+                background-color: red;
+                border-radius: 50%;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.1rem;
+                font-weight: bold;
+                position: absolute;
+                top: -7px;
+                right: -7px;
+            }
+        }
+        
+    }
+  }
+
+  .mobile{
+      width: 100%;
+      height: 100%;
+     display: none;
+  }
+}
+
+@media(max-width: 68.75em){
+    .navbar{
+        .desktop{
+            .wrapper{
+                .search{
+                    width: 35%;
+                }
+
+                .items{
+                    .item{
+                        font-size: 1.4rem;
+
+                        .icon{
+                            font-size: 1.9rem;
+                        }
+
+                        .avatar{
+                            width: 3rem;
+                            height: 3rem;
+                            border-radius: 50%;
+                        }
+
+                        .counter{
+                            width: 1.3rem;
+                            height: 1.3rem;
+                            background-color: red;
+                            border-radius: 50%;
+                            color: white;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 1.1rem;
+                            font-weight: bold;
+                            position: absolute;
+                            top: -7px;
+                            right: -8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 46em){
+    .navbar{
+
+    .desktop{
+        display: none;
+    }
+
+    .mobile{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem;
+        position: relative;
+        z-index: 10;
+
+        .item{
+
+            display: flex;
+            align-items: center;
+
+            .icon{
+                font-size: 2.2rem;
+            }
+        }
+
+        p{
+            color: purple;
+            font-weight: bold;
+        }
+
+        .search{
+            display: flex;
+            align-items: center;
+            border:  0.5px solid lightgray;
+            
+            input{
+                border: none;
+                outline: none;
+                font-size: 1.2rem;
+            }
+
+            .icon{
+                font-size: 2.2rem;
+            }
+        }
+
+        .mobile-nav{
+            width: 50vw;
+            height: 100vh;
+            backdrop-filter: blur(10px);
+            background-color: rgba(25, 24, 24, 0.937);
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            visibility: hidden;
+            transform: translateX(-100%);
+            transition: all 0.7s ease-in;
+            z-index: 999;
+
+            .header{
+                width: 100%;
+                height: 5vh;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                margin-bottom: 1rem;
+
+                .close-outline{
+                    display: block;
+                    background-color: rgb(41, 41, 41);
+                    color: white;
+                    font-size: 15px;
+                    margin-top: 5px;
+                    margin-right: 14px;
+                    cursor: pointer;
+                }
+            }
+
+            .mobile-nav-list{
+                display: flex;
+                height: 95vh;
+
+                ul{
+                    width: 100%;
+                    display: flex;
+                    list-style: none;
+                    margin:0;
+                    flex-direction: column;
+                    // justify-content: center;
+                    align-items: center;
+                    gap: 1.2rem;
+                    font-size: 20px;
+
+                    p{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        border-bottom: 0.5px solid rgb(230, 227, 227);
+                        font-size: 1.7rem;
+                    }
+
+                    li{
+                        
+                        span{
+                            font-size: 1.6rem;
+                            color: white;
+                        }
+                    }
+                }
+            }
+           
+            
+        }
+
+        .nav-open{
+            
+            &.mobile-nav{
+            transform: translateX(0%);
+            opacity: 1;
+            visibility: visible;
+            pointer-events: visible;
+            }
+        }
+           
+    }
+
+    }
+
+}
