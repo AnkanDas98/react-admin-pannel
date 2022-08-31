@@ -4,28 +4,43 @@
   .homeContainer{
     flex: 6;
 
-    .widgets{
+    main{
+    .widgets, .charts{
       width: 100%;
       display: flex;
       padding: 2rem;
       gap: 2rem;
     }
+
+    .charts{
+      padding: 5px 20px;
+    }
+
+  }
   }
 
 }
+
 
 @media(max-width:46em){
   .home{
     
     .homeContainer{
   
+      main {
       .widgets{
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding: 2rem;
         gap: 2rem;
       }
+
+      .charts{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
     }
   
   }
