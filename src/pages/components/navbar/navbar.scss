@@ -148,7 +148,7 @@
         justify-content: space-between;
         padding: 2rem;
         position: relative;
-        z-index: 10;
+       
 
         .item{
 
@@ -197,11 +197,12 @@
 
             .header{
                 width: 100%;
-                height: 5vh;
+                height: 5%;
                 display: flex;
                 align-items: center;
                 justify-content: flex-end;
                 margin-bottom: 1rem;
+                margin-top: 1rem;
 
                 .close-outline{
                     display: block;
@@ -216,15 +217,16 @@
 
             .mobile-nav-list{
                 display: flex;
-                height: 95vh;
+                height: 93%;
+                width: 100%;
 
                 ul{
+                    height: 100%;
                     width: 100%;
                     display: flex;
                     list-style: none;
                     margin:0;
                     flex-direction: column;
-                    // justify-content: center;
                     align-items: center;
                     gap: 1.2rem;
                     font-size: 20px;
