@@ -5,6 +5,10 @@
     flex: 6;
 
     main{
+      margin: 0;
+      padding: 0;
+      width: 100%;
+
     .widgets, .charts{
       width: 100%;
       display: flex;
@@ -14,6 +18,21 @@
 
     .charts{
       padding: 5px 20px;
+    }
+
+    .listContainer{
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      padding: 2rem;
+      margin: 2rem;
+      width: 98%;
+
+      .listTitle{
+        font-weight: 500;
+        font-size: 1.6rem;
+        color: gray;
+        margin-bottom: 1.5rem;
+      }
     }
 
   }
@@ -30,6 +49,9 @@
         display: flex;
         flex-direction: column;
        }
+       .listContainer{
+          width: 75.2vw;
+      }
      }
    } 
  }
@@ -52,6 +74,11 @@
         display: flex;
         flex-direction: column;
       }
+
+      .listContainer{
+       width: 89vw;
+      }
+
     }
     }
   
