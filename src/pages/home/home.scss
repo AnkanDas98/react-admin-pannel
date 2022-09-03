@@ -1,86 +1,82 @@
-.home{
+.home {
   display: flex;
 
-  .homeContainer{
+  .homeContainer {
     flex: 6;
 
-    main{
+    main {
       margin: 0;
       padding: 0;
       width: 100%;
 
-    .widgets, .charts{
-      width: 100%;
-      display: flex;
-      padding: 2rem;
-      gap: 2rem;
-    }
-
-    .charts{
-      padding: 5px 20px;
-    }
-
-    .listContainer{
-      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
-      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
-      padding: 2rem;
-      margin: 2rem;
-      width: 98%;
-
-      .listTitle{
-        font-weight: 500;
-        font-size: 1.6rem;
-        color: gray;
-        margin-bottom: 1.5rem;
-      }
-    }
-
-  }
-  }
-
-}
-
-@media(max-width:68em){
-  .home{
-    .homeContainer{
-      main {
-      .charts{
+      .widgets,
+      .charts {
         width: 100%;
         display: flex;
-        flex-direction: column;
-       }
-       .listContainer{
-          width: 75.2vw;
-      }
-     }
-   } 
- }
-}
-
-
-@media(max-width:46em){
-  .home{
-    .homeContainer{
-      main {
-      .widgets{
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        padding: 2rem;
         gap: 2rem;
       }
 
-      .charts{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
+      .charts {
+        padding: 5px 20px;
       }
 
-      .listContainer{
-       width: 89vw;
-      }
+      .listContainer {
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+        box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+        padding: 2rem;
+        margin: 2rem;
+        width: 98%;
 
+        .listTitle {
+          font-weight: 500;
+          font-size: 1.6rem;
+          color: gray;
+          margin-bottom: 1.5rem;
+        }
+      }
     }
+  }
+}
+
+@media (max-width: 68em) {
+  .home {
+    .homeContainer {
+      main {
+        .charts {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+        .listContainer {
+          width: 75.2vw;
+        }
+      }
     }
-  
+  }
+}
+
+@media (max-width: 46em) {
+  .home {
+    .homeContainer {
+      main {
+        .widgets {
+          width: 100%;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 2rem;
+        }
+
+        .charts {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .listContainer {
+          width: 89vw;
+        }
+      }
+    }
   }
 }
