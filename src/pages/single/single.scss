@@ -1,0 +1,137 @@
+.single {
+    display: flex;
+
+    .singleContainer {
+        flex: 6;
+
+        main {
+            width: 100%;
+
+            .top {
+                padding: 2rem;
+                display: flex;
+                gap: 2rem;
+
+                .left {
+                    flex: 1;
+                    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+                    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+                    padding: 2rem;
+                    position: relative;
+
+                    .editButton {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        padding: 6px 10px;
+                        font-size: 1.3rem;
+                        font-weight: bold;
+                        color: #7451f8;
+                        background-color: #7551f88c;
+                        border-radius: 0px 0 0 5px;
+                        cursor: pointer;
+                    }
+
+                    .title {
+                        font-size: 1.3rem;
+                        color: lightgray;
+                        margin-bottom: 2rem;
+                    }
+
+                    .item {
+                        display: flex;
+                        gap: 2rem;
+
+                        .itemImg {
+                            width: 10rem;
+                            height: 10rem;
+                            object-fit: cover;
+                            border-radius: 50%;
+                            align-self: center;
+                        }
+
+                        .details {
+                            .itemTitle {
+                                margin-bottom: 1rem;
+                                color: #555;
+                            }
+
+                            .detailItem {
+                                margin-bottom: 1rem;
+                                font-size: 1.5rem;
+
+                                .itemKey {
+                                    font-weight: bold;
+                                    color: gray;
+                                    margin-right: 0.5rem;
+                                }
+
+                                .itemValue {
+                                    font-weight: 300;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .right {
+                    flex: 2;
+                }
+            }
+
+            .bottom{
+                .listContainer {
+                    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+                    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+                    padding: 2rem;
+                    margin: 2rem;
+                    width: 98%;
+            
+                    .listTitle {
+                      font-weight: 500;
+                      font-size: 1.6rem;
+                      color: gray;
+                      margin-bottom: 1.5rem;
+                    }
+                  }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 68em) {
+    .single {
+        .singleContainer {
+            main {
+                .top {
+                    flex-direction: column;
+                }
+
+                .bottom{
+                    .listContainer {
+                        width: 75.2vw;
+                      }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 46em) {
+    .single {
+        .singleContainer {
+            main {
+                .top {
+                    flex-direction: column;
+                }
+                .bottom{
+                    .listContainer {
+                        width: 89vw;
+                      }
+                }
+            }
+        }
+    }
+}

@@ -11,9 +11,8 @@ import {
 
 import "./chart.scss";
 
-const Chart = () => {
+const Chart = ({ aspect, title }) => {
   const screenSize = window.matchMedia("(max-width: 790px)");
-
   const data = [
     { name: "January", Total: 1200 },
     { name: "February", Total: 2100 },
@@ -25,13 +24,22 @@ const Chart = () => {
 
   return (
     <div className="chart">
-      <div className="title">Last 6 month (Revenue)</div>
-      <ResponsiveContainer width="100%" height={screenSize.matches ? 300 : 400}>
+      <div className="title">{title}</div>
+      <ResponsiveContainer
+        width="100%"
+        aspect={aspect ? aspect : undefined}
+        height={!aspect ? (screenSize.matches ? 300 : 400) : undefined}
+      >
         <AreaChart
           width={730}
           height={250}
           data={data}
-          margin={{ top: 15, right: 30, left: 0, bottom: 0 }}
+          className="areaChart"
+          margin={
+            screenSize.matches
+              ? { top: 15, right: 15, left: 30, bottom: 0 }
+              : { top: 15, right: 30, left: 0, bottom: 0 }
+          }
         >
           <defs>
             <linearGradient id="total" x1="0" y1="0" x2="0" y2="1">

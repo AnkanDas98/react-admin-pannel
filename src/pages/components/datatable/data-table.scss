@@ -59,12 +59,13 @@
             }
         }
     }
+
+   
 }
 
 @media(max-width:68em){
     .dataTable{
         height: 50vh;
-
         .dataGrid {
             font-size: 1.4rem;
             color: gray;
@@ -86,5 +87,9 @@
         }
 
        }
+       .empty{
+        height: 46vh;
+        width: 100%;
+    }
     
   }

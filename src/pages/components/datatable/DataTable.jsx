@@ -22,6 +22,10 @@ const actionColumn = [
 ];
 
 const DataTable = () => {
+  const screenSize = window.matchMedia("(max-width:44em)");
+
+  console.log(screenSize);
+
   return (
     <div className="dataTable">
       <DataGrid
@@ -45,6 +49,7 @@ const DataTable = () => {
           },
         }}
       />
+      {screenSize && <div className="empty"></div>}
     </div>
   );
 };

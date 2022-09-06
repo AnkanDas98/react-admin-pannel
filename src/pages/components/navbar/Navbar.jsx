@@ -58,7 +58,7 @@ const Navbar = () => {
             </div>
             <div className="item">
               <img
-                src="images/user-profile.jpeg"
+                src="/images/user-profile.jpeg"
                 alt="A man laughing in joy"
                 className="avatar"
               />
