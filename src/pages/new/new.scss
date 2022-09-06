@@ -20,9 +20,72 @@
 
                 .left{
                     flex: 1;
+                    text-align: center;
+                    border-right: 1px solid lightgray;
+
+                    img{
+                        width: 80%;
+                        height: 40rem;
+                      
+                        object-fit: cover;
+                        
+                    }
                 }
                 .right{
-                    flex: 2
+                    flex: 2;
+
+                    form{
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 2rem;
+                        justify-content: space-around;
+
+                        .formInput{
+                            width: 40%;
+
+                            label{
+                                display: flex;
+                                align-items: center;
+                                gap: 1rem;
+                                font-size: 1.6rem;
+
+                                .icon{
+                                    cursor: pointer;
+                                    font-size: 2.5rem;
+                                }
+                            }
+
+                            input{
+                                width: 100%;
+                                padding: 5px;
+                                border: none;
+                                border-bottom: 1px solid gray;
+                                font-size: 1.4rem;
+
+                                &:focus{
+                                    outline: none;
+                                }
+                            }
+                        }
+
+                        .btn{
+                            width: 100%;
+                            margin-top: 1rem;
+                            text-align: center;
+                          
+
+                            button{
+                                width: 15%;                         
+                                padding: 1rem;
+                                border: none;
+                                background-color: teal;
+                                color: white;
+                                font-weight: bold;
+                                cursor: pointer;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -30,10 +93,141 @@
 }
 
 @media (max-width: 68em) {
+    .new{
     
-  }
+        .newContainer{
+            
+    
+            main{
+                .top, .bottom{
+                    display: flex;
+                    flex-direction: column;
+
+                   .left{
+                    img{
+                        width: 10rem;
+                        height: 10rem;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        
+                    }
+                   }
+    
+              
+                    .right{
+                        flex: 2;
+                        margin-top: 1.1rem;
+    
+                        form{
+                                  
+                            gap: 1rem;
+
+                            .formInput{
+                               width: 42%;
+                                input{
+                                    width: 100%;
+                                    padding: 5px;
+                                    border: none;
+                                    border-bottom: 1px solid gray;
+
+                                    &:focus{
+                                        outline: none;
+                                    }
+                                }
+                            }
+    
+                            .btn{
+                                width: 100%;
+                                margin-top: 1rem;
+                                text-align: center;
+                              
+                                button{
+                                    width: 40%;                         
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    }
+    
+
   
   @media (max-width: 46em) {
+    .new{
+        width: 100%;
+        display: flex;
     
+        .newContainer{
+            flex: 6;
+    
+            main{
+                .top, .bottom{
+                    display: flex;
+                    flex-direction: column;
+    
+                    h1{
+                        color: lightgray;
+                        font-size: 2rem;
+                    }
+    
+                    .left{
+                        flex: 1;
+                        text-align: center;
+    
+                        img{
+                            width: 10rem;
+                            height: 10rem;
+                            border-radius: 50%;
+                            object-fit: cover;
+                            
+                        }
+                    }
+                    .right{
+                        flex: 2;
+                        margin-top: 1.1rem;
+    
+                        form{
+                            width: 100%;
+                            flex-direction: column;        
+                            gap: 2.2rem;
+
+                            .formInput{
+                                width: 100%;
+    
+    
+                                input{
+                                    width: 100%;
+                                    padding: 5px;
+                                    border: none;
+                                    border-bottom: 1px solid gray;
+
+                                    &:focus{
+                                        outline: none;
+                                    }
+                                }
+                            }
+    
+                            .btn{
+                                width: 100%;
+                                margin-top: 1rem;
+                                text-align: center;
+                              
+                                button{
+                                    width: 40%;                         
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
   }
   
