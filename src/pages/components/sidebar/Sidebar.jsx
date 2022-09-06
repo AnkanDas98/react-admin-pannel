@@ -1,3 +1,6 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 import {
   AccountCircleOutlined,
   CreditCard,
@@ -12,7 +15,6 @@ import {
   SettingsSystemDaydreamOutlined,
   Store,
 } from "@mui/icons-material";
-import React from "react";
 
 import "./sidebar.scss";
 
@@ -20,7 +22,9 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="top">
-        <span className="logo">Admin</span>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <span className="logo">Admin</span>
+        </Link>
       </div>
       <hr />
       <div className="center">
@@ -31,14 +35,18 @@ const Sidebar = () => {
             <span>Dashboard</span>
           </li>
           <p className="title">LISTS</p>
-          <li>
-            <PersonOutlined className="icon" />
-            <span>Users</span>
-          </li>
-          <li>
-            <Store className="icon" />
-            <span>Products</span>
-          </li>
+          <Link to="/users" style={{ textDecoration: "none" }}>
+            <li>
+              <PersonOutlined className="icon" />
+              <span>Users</span>
+            </li>
+          </Link>
+          <Link to="/products" style={{ textDecoration: "none" }}>
+            <li>
+              <Store className="icon" />
+              <span>Products</span>
+            </li>
+          </Link>
           <li>
             <CreditCard className="icon" />
             <span>Orders</span>
