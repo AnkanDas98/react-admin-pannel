@@ -19,8 +19,6 @@ const New = ({ inputs, title }) => {
     dispatch(hide_sidebar());
   };
 
-  console.log(file);
-
   return (
     <div className="new">
       <Sidebar />

@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { useSelector } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { productInputs, userInputs } from "./formSource";
 
@@ -7,9 +9,13 @@ import Login from "./pages/login/Login";
 import New from "./pages/new/New";
 import Single from "./pages/single/Single";
 
+import "./style/dark.scss";
+
 function App() {
+  const { dark } = useSelector((state) => state.theme);
+
   return (
-    <div className="App">
+    <div className={`app ${dark && "dark"}`}>
       <BrowserRouter>
         <Routes>
           <Route path="/">

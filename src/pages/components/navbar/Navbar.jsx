@@ -1,11 +1,14 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import { show_sidebar, hide_sidebar } from "../../../reducers/sidebarReducer";
+import { dark_theme, day_theme } from "../../../reducers/themeReducer";
 
 import {
   ChatBubbleOutlineOutlined,
   CloseOutlined,
+  DarkMode,
   DarkModeOutlined,
   LanguageOutlined,
   ListOutlined,
@@ -17,9 +20,11 @@ import "./navbar.scss";
 
 const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
+
   const dispatch = useDispatch();
 
   const { showSidebar } = useSelector((state) => state.sidebar);
+  const { dark } = useSelector((state) => state.theme);
 
   const handleSideMenu = () => {
     if (!showSidebar) {
@@ -43,7 +48,17 @@ const Navbar = () => {
               English
             </div>
             <div className="item">
-              <DarkModeOutlined className="icon" />
+              {!dark ? (
+                <DarkModeOutlined
+                  className="icon"
+                  onClick={() => dispatch(dark_theme())}
+                />
+              ) : (
+                <DarkMode
+                  className="icon"
+                  onClick={() => dispatch(day_theme())}
+                />
+              )}
             </div>
             <div className="item">
               <NotificationsNoneOutlined className="icon" />
@@ -70,7 +85,9 @@ const Navbar = () => {
         <div className="item">
           <ListOutlined className="icon" onClick={handleSideMenu} />
         </div>
-        <p>Admin</p>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <p>Admin</p>
+        </Link>
         <div className="search">
           {showSearch && <input type="text" placeholder="Search...." />}
           <SearchOutlined
@@ -87,16 +104,22 @@ const Navbar = () => {
           <div className="mobile-nav-list">
             <ul>
               <p className="title">MAIN</p>
-              <li>
-                <span>Dashboard</span>
-              </li>
+              <Link to="/" style={{ textDecoration: "none" }}>
+                <li>
+                  <span>Dashboard</span>
+                </li>
+              </Link>
               <p className="title">LISTS</p>
-              <li>
-                <span>Users</span>
-              </li>
-              <li>
-                <span>Products</span>
-              </li>
+              <Link to="/users" style={{ textDecoration: "none" }}>
+                <li>
+                  <span>Users</span>
+                </li>
+              </Link>
+              <Link to="/products" style={{ textDecoration: "none" }}>
+                <li>
+                  <span>Products</span>
+                </li>
+              </Link>
               <li>
                 <span>Orders</span>
               </li>
@@ -126,6 +149,14 @@ const Navbar = () => {
               </li>
               <li>
                 <span>Logout</span>
+              </li>
+              <p className="title">Theme</p>
+              <li>
+                <span
+                  onClick={() => dispatch(dark ? day_theme() : dark_theme())}
+                >
+                  {dark ? "Light" : "Dark"}
+                </span>
               </li>
             </ul>
           </div>

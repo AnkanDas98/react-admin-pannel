@@ -100,15 +100,13 @@
 
 @media (max-width: 46em) {
     .dataTable {
-        height: 50vh;
-
+        height: 100vh;
+        
         .dataGrid {
             font-size: 1.4rem;
             color: gray;
+            height: 61%;
         }
     }
-    .empty {
-        height: 46vh;
-        width: 100%;
-    }
+    
 }

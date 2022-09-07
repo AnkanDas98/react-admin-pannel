@@ -30,7 +30,7 @@
                 border: none;
                 outline: none;
                 font-size: 1.2rem;
-
+                background: transparent;
                 &::placeholder{
                     font-size: 1.2rem;
                 }
@@ -175,6 +175,7 @@
                 border: none;
                 outline: none;
                 font-size: 1.2rem;
+                background: transparent;
             }
 
             .icon{

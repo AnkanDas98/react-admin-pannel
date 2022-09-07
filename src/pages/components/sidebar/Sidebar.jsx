@@ -17,8 +17,12 @@ import {
 } from "@mui/icons-material";
 
 import "./sidebar.scss";
+import { useDispatch } from "react-redux";
+import { dark_theme, day_theme } from "../../../reducers/themeReducer";
 
 const Sidebar = () => {
+  const dispatch = useDispatch();
+
   return (
     <div className="sidebar">
       <div className="top">
@@ -89,11 +93,17 @@ const Sidebar = () => {
         </ul>
       </div>
       <div className="bottom">
+        <div
+          className="colorOption"
+          onClick={() => dispatch(day_theme())}
+        ></div>
+        <div
+          className="colorOption"
+          onClick={() => dispatch(dark_theme())}
+        ></div>
+        {/* <div className="colorOption"></div>
         <div className="colorOption"></div>
-        <div className="colorOption"></div>
-        <div className="colorOption"></div>
-        <div className="colorOption"></div>
-        <div className="colorOption"></div>
+        <div className="colorOption"></div> */}
       </div>
     </div>
   );

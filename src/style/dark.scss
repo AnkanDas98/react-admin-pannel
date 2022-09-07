@@ -1,0 +1,109 @@
+.app.dark {
+    background-color: #111;
+    color: rgb(156, 156, 156);
+
+    .charGrid {
+        color: rgba(228, 228, 228, 0.219);
+    }
+
+    .tableContainer {
+        background-color: #111;
+
+        .tableCell {
+            color: gray;
+        }
+    }
+
+    .navbar {
+        color: #999;
+        border-color: #333;
+
+        .search {
+            border-color: gray;
+
+            input {
+                color: lightgray;
+            }
+        }
+    }
+
+    .sidebar {
+        background-color: #111;
+        border-color: #333;
+
+        .top {
+            .logo {
+                color: #999;
+            }
+        }
+        hr {
+            border-color: #333;
+        }
+
+        ul {
+            li {
+                &:hover {
+                    background-color: #333;
+                }
+
+                .icon {
+                    color: #999;
+                }
+            }
+        }
+    }
+
+    .dataTable {
+        .empty{
+            background-color: #111;
+        }   
+        .dataGrid {
+            color: gray;
+            border: none;
+
+            .viewButton,
+            .deleteButton {
+                color: gray;
+                border: none;
+            }
+
+            .css-levciy-MuiTablePagination-displayedRows{
+                color: lightgray;
+            }
+
+            .MuiSvgIcon-root {
+                color: white;
+            }
+
+            .Mui-checked {
+                background-color: rgba(0, 0, 255, 0.435);
+            }
+
+            
+
+            .cellWithStatus {
+                color: #999;
+                &.active {
+                    background-color: green;
+                }
+
+                &.passive {
+                    background-color: red;
+                }
+
+                &.pending {
+                    background-color: orangered;
+                }
+            }
+        }
+
+        
+    }
+
+    .new{
+        input{
+            background-color: transparent;
+        }
+    }
+}
+
