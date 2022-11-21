@@ -6,7 +6,7 @@ import { userColumns, userRows } from "../../../datatablesources";
 import "./data-table.scss";
 import { Link } from "react-router-dom";
 
-const DataTable = () => {
+const DataTable = ({ listFor }) => {
   const [data, setData] = useState(userRows);
 
   const handleDelete = (id) => {
@@ -35,8 +35,11 @@ const DataTable = () => {
   return (
     <div className="dataTable">
       <div className="dataTableTitle">
-        Add New User
-        <Link to="/users/new" className="link">
+        {listFor === "user" ? "Add New User" : "Add New Product"}
+        <Link
+          to={listFor === "user" ? "/users/new" : "/products/new"}
+          className="link"
+        >
           Add New
         </Link>
       </div>

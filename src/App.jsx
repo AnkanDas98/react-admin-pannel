@@ -22,7 +22,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="login" element={<Login />} />
             <Route path="users">
-              <Route index element={<List />} />
+              <Route index element={<List listFor="user" />} />
               <Route path=":userId" element={<Single />} />
               <Route
                 path="new"
@@ -30,7 +30,7 @@ function App() {
               />
             </Route>
             <Route path="products">
-              <Route index element={<List />} />
+              <Route index element={<List listFor="product" />} />
               <Route path=":productId" element={<Single />} />
               <Route
                 path="new"

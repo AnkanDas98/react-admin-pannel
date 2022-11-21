@@ -9,7 +9,7 @@ import Sidebar from "../components/sidebar/Sidebar";
 
 import "./list.scss";
 
-const List = () => {
+const List = ({ listFor }) => {
   const dispatch = useDispatch();
 
   const { showSidebar } = useSelector((state) => state.sidebar);
@@ -24,7 +24,7 @@ const List = () => {
       <div className="listContainer">
         <Navbar />
         <main onClick={showSidebar ? handleSidebar : undefined}>
-          <DataTable />
+          <DataTable listFor={listFor} />
         </main>
       </div>
     </div>
